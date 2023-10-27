@@ -8,6 +8,11 @@ fi
 
 mongoUris=$(docker service inspect -f "{{json .Spec.TaskTemplate.ContainerSpec.Env}}" $1 | jq | grep mongoUris | sed -E 's/.*=(.+)",/\1/')
 
+if [ -z "$mongoUris" ]; then
+  echo "no mongoUris found"
+  exit 1;
+fi
+
 container_id=$(command docker ps -f "name=$(hostname)" --format "{{.ID}}")
 
 if [ -z "$container_id" ]; then
