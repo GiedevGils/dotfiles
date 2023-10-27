@@ -1,0 +1,25 @@
+# generic use
+alias resh='source ~/.zshrc'
+alias guname='git config user.name'
+alias gemail='git config user.email'
+alias csh='code ~/.config/shortcuts'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# Dup
+alias dockerclear='docker config rm'
+alias dcu='docker context use'
+alias dcud='dcu default'
+alias nr='npm run'
+
+# aws
+alias awslogin='aws ecr get-login --no-include-email --profile=dup'
+ 
+# DSP
+alias mdb='sh ~/tools/mdbd.sh'
+ 
+# git
+alias gpnv='git push --no-verify'
+
+# mongo
+alias msh='mongosh analytics'
+alias clearovp='sh ~/tools/clear-ovp.sh'

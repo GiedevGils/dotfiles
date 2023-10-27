@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+mongoUris=$(docker service inspect -f "{{json .Spec.TaskTemplate.ContainerSpec.Env}}" capo_rest | jq | grep mongoUris | sed -E 's/.*=(.+)",/\1/')
+
+container_id=$(command docker ps -f "name=$(hostname)" --format "{{.ID}}")
+
+if [ -z "$container_id" ]; then
+  echo "starting new container"
+  echo "detach with C-p,C-q"
+  docker run --rm -it --name $(hostname) rtsp/mongosh:latest mongosh $mongoUris
+else
+  echo "attach to existing container"
+  echo "detach with C-p,C-q"
+  docker attach "$container_id"
+fi
+
