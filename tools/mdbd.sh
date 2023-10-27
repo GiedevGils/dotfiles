@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
-mongoUris=$(docker service inspect -f "{{json .Spec.TaskTemplate.ContainerSpec.Env}}" capo_rest | jq | grep mongoUris | sed -E 's/.*=(.+)",/\1/')
+
+if [ -z "$1" ]; then
+  echo "usage: mdbd <service>"
+fi
+
+
+mongoUris=$(docker service inspect -f "{{json .Spec.TaskTemplate.ContainerSpec.Env}}" $1 | jq | grep mongoUris | sed -E 's/.*=(.+)",/\1/')
 
 container_id=$(command docker ps -f "name=$(hostname)" --format "{{.ID}}")
 
