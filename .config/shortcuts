@@ -15,11 +15,14 @@ alias nr='npm run'
 alias awslogin='aws ecr get-login --no-include-email --profile=dup'
  
 # DSP
-alias mdb='sh ~/tools/mdbd.sh'
  
 # git
 alias gpnv='git push --no-verify'
 
 # mongo
 alias msh='mongosh analytics'
+
+# tools
 alias clearovp='sh ~/tools/clear-ovp.sh'
+alias mdbexport='sh ~/tools/mdbexport.sh'
+alias mdbd='sh ~/tools/mdbd.sh'

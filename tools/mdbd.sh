@@ -2,6 +2,7 @@
 
 if [ -z "$1" ]; then
   echo "usage: mdbd <service>"
+  exit 1;
 fi
 
 
