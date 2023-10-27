@@ -1,4 +1,4 @@
-#!/usr/binenv bash
+#!/usr/binenv bash 
 
 if [ -z "$2" ]; then
   echo "usage: mdbexport <service> <collection>"

@@ -3,7 +3,7 @@ alias resh='source ~/.zshrc'
 alias guname='git config user.name'
 alias gemail='git config user.email'
 alias csh='code ~/.config/shortcuts'
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias gcfg='git cfg' # alias defined on initial setup.
 
 # Dup
 alias dockerclear='docker config rm'
@@ -13,9 +13,7 @@ alias nr='npm run'
 
 # aws
 alias awslogin='aws ecr get-login --no-include-email --profile=dup'
- 
-# DSP
- 
+
 # git
 alias gpnv='git push --no-verify'
 
