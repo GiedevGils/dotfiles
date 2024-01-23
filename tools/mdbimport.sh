@@ -30,4 +30,4 @@ read -p "import documents from file '$3' into collection '$2' (yn) " yn
 if [ "$yn" = "y" ]; then
 docker run --rm -i --name $container_name mongo:4.4 mongoimport --uri=$mongoUris --collection $2 < $3
 fi
-/
+
