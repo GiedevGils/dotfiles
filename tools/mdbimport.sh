@@ -7,17 +7,16 @@ fi
 
 mongoUris=$(docker service inspect -f "{{json .Spec.TaskTemplate.ContainerSpec.Env}}" $1 | jq | grep mongoUris | sed -E 's/.*=(.+)",/\1/')
 
-if [ -z "$mongoUris"]; then
+if [ -z "$mongoUris" ]; then
   echo "no mongoUris found"
   exit 1;
 fi
 
 container_name="$(hostname)-import"
 container_id=$(command docker ps -f "name=$container_name" --format "{{.ID}}")
-echo "id: $container_id"
 
 if [ ! -z "$container_id" ]; then
-  echo "stop existing container"
+  echo "stop existing container: $container_id"
   docker stop $container_id
 fi
 

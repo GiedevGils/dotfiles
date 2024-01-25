@@ -5,7 +5,7 @@ if [ "$CONTEXT" != "default" ]; then
 	exit 1
 fi
 
-read -p "This will remove the opdrachtverstrekking database & the bijlage database. Continue? (y/n) " choice
+read -p "This will delete the ovp & bijlage-api databases. it'll also clear the testtool of messages and opdrachten. Continue? (y/n) " choice
 
 case "$choice" in
 	y|Y ) mongosh opdrachtverstrekking --eval 'db.dropDatabase()' --quiet; mongosh bijlage --eval 'db.dropDatabase()' --quiet; mongosh testtool --eval 'db.message.deleteMany({}); db.opdracht.deleteMany({});' --quiet;;

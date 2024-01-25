@@ -15,10 +15,8 @@ fi
 container_name="$(hostname)-export"
 container_id=$(command docker ps -f "name=$container_name" --format "{{.ID}}")
 
-echo $container_id
-
 if [ ! -z "$container_id" ]; then
-  echo "stop existing container"
+  echo "stop existing container: $container_id"
   docker stop $container_id
 fi
 
