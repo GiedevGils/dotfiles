@@ -10,6 +10,8 @@ alias dockerclear='docker config rm'
 alias dcu='docker context use'
 alias dcud='dcu default'
 alias nr='npm run'
+alias nt='npm run test'
+alias ntci='npm run citest --runInBand'
 
 # aws
 alias awslogin='aws ecr get-login --no-include-email --profile=dup'
