@@ -1,6 +1,6 @@
-export ZSH='~/.oh-my-zsh'
+export ZSH='$HOME/.oh-my-zsh'
 plugins=(git z zsh-autosuggestions zsh-syntax-highlighting)
-source ~/.oh-my-zsh/oh-my-zsh.sh
+source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
