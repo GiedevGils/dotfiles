@@ -8,6 +8,7 @@ I have chosed to use a bare git repo. It is cloned into a folder, and then uses 
 1. ZSH needs to be installed.
 
 ## Commands
-- `git clone git@gitlab.com/GiedevGils/dotfiles.git $HOME/.cfg --bare`
+- Create a ssh key. [gitlab tutorial](https://docs.gitlab.com/ee/user/ssh.html)
+- `git clone git@gitlab.com:GiedevGils/dotfiles.git $HOME/.cfg --bare`
 - `source ~/.zshrc`
 - `gcfg config --local status.showUntrackedFiles no`
