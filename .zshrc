@@ -1,4 +1,4 @@
-export ZSH='$HOME/.oh-my-zsh'
+export ZSH="$HOME/.oh-my-zsh"
 plugins=(git z zsh-autosuggestions zsh-syntax-highlighting)
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
