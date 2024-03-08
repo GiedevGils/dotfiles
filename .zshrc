@@ -32,7 +32,4 @@ source ~/.config/hooks
 [ -f ~/.config/shortcuts ] && . ~/.config/shortcuts
 
 eval "$(starship init zsh)"
-
-
-
-[ -f ~/.inshellisense/key-bindings.zsh ] && source ~/.inshellisense/key-bindings.zsh
+export ACKRC="$HOME/.config/ack/ackrc"
