@@ -22,11 +22,11 @@ fi
 
 read -p "remove all documents from  collection '$2' (y/n) " yn
 if [ $yn = "y" ]; then
-  docker run --rm -t --name $container_name mongo:4.4 mongo $mongoUris --eval "db.$2.remove({})" 
+  docker run --rm -t --name $container_name mongo:5 mongo $mongoUris --eval "db.$2.remove({})" 
 fi
 
 read -p "import documents from file '$3' into collection '$2' (yn) " yn
 if [ "$yn" = "y" ]; then
-docker run --rm -i --name $container_name mongo:4.4 mongoimport --uri=$mongoUris --collection $2 < $3
+docker run --rm -i --name $container_name mongo:5 mongoimport --uri=$mongoUris --collection $2 < $3
 fi
 

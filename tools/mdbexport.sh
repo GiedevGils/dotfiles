@@ -20,4 +20,4 @@ if [ ! -z "$container_id" ]; then
   docker stop $container_id
 fi
 
-docker run --rm -i --name $container_name mongo:4.4 mongoexport --uri=$mongoUris --collection $2 --quiet
+docker run --rm -i --name $container_name mongo:5 mongoexport --uri=$mongoUris --collection $2 --quiet
