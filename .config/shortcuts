@@ -13,6 +13,7 @@ alias nr='npm run'
 
 # aws
 alias awslogin='aws ecr get-login --no-include-email --profile=dup'
+alias aws-latest-dup-tag="aws ecr describe-images --repository-name dup-136 --profile dup | jq -r '.imageDetails[].imageTags | select(index(\"latest\")) | del(..|select( . == \"latest\")) | .[]'"
 
 # git
 alias gpnv='git push --no-verify'
@@ -25,3 +26,7 @@ alias clearovp='sh ~/tools/clear-ovp.sh'
 alias mdbexport='sh ~/tools/mdbexport.sh'
 alias mdbimport='sh ~/tools/mdbimport.sh'
 alias mdbd='sh ~/tools/mdbd.sh'
+alias update-aws-sec-groups='bash ~/tools/update-ec2-secgroups.sh'
+
+# ------------- Functions for aliases
+
