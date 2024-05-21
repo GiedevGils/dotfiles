@@ -12,7 +12,6 @@ dup_sec_group_names=(
   dup-prd
 )
 
-
 ORANGE='\033[0;33m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
@@ -22,8 +21,8 @@ TAG_VALUE=gvgils-script
 
 add_rules () {
   profile=$1
-  shift
-  names=("${@}")
+  shift # https://www.computerhope.com/unix/bash/shift.htm
+  names=("${@}") # $@ is all parameters. because we shift on the line above, the 1st parameter that is stored in $profile is removed
 
   sec_groups=()
 
