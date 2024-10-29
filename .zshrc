@@ -2,10 +2,6 @@ export ZSH="$HOME/.oh-my-zsh"
 plugins=(git z zsh-autosuggestions zsh-syntax-highlighting)
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
-
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
 env=~/.ssh/agent.env
 
 agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
@@ -28,8 +24,13 @@ fi
 
 unset env
 
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 source ~/.config/hooks
 [ -f ~/.config/shortcuts ] && . ~/.config/shortcuts
 
 eval "$(starship init zsh)"
 export ACKRC="$HOME/.config/ack/ackrc"
+
+
