@@ -30,7 +30,11 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 source ~/.config/hooks
 [ -f ~/.config/shortcuts ] && . ~/.config/shortcuts
 
+# Created by `pipx` on 2024-11-07 14:01:39
+export PATH="$PATH:/home/ubuntu/.local/bin"
+
 eval "$(starship init zsh)"
 export ACKRC="$HOME/.config/ack/ackrc"
+
 
 
