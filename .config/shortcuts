@@ -24,7 +24,7 @@ alias gpnv='git push --no-verify'
 alias msh='mongosh analytics'
 
 # tools
-alias clearovp='sh ~/tools/clear-ovp.sh'
+alias clearopv='sh ~/tools/clear-ovp.sh'
 alias mdbexport='sh ~/tools/mdbexport.sh'
 alias mdbimport='sh ~/tools/mdbimport.sh'
 alias mdbd='sh ~/tools/mdbd.sh'
