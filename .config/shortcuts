@@ -29,6 +29,8 @@ alias mdbexport='sh ~/tools/mdbexport.sh'
 alias mdbimport='sh ~/tools/mdbimport.sh'
 alias mdbd='sh ~/tools/mdbd.sh'
 alias update-aws-sec-groups='bash ~/tools/update-ec2-secgroups.sh'
+alias bat='batcat' 
+alias cat='batcat'
 
 # ------------- Functions for aliases
 
