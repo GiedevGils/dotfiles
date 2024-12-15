@@ -9,7 +9,6 @@ mkdir -p $1/$2
 
 touch $1/$2/1.js
 touch $1/$2/2.js
-touch $1/$2/lib.js
 touch $1/$2/input.txt
 
 cd $1/$2
