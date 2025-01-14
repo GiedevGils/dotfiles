@@ -27,8 +27,9 @@ unset env
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-source ~/.config/hooks
+[ -f ~/.config/hooks ] && . ~/.config/hooks
 [ -f ~/.config/shortcuts ] && . ~/.config/shortcuts
+[ -f ~/.config/zsh_functions ] && . ~/.config/zsh_functions
 
 # Created by `pipx` on 2024-11-07 14:01:39
 export PATH="$PATH:/home/ubuntu/.local/bin"

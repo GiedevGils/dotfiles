@@ -1,0 +1,16 @@
+_z_dirs() {
+    local datafile="${_Z_DATA:-$HOME/.z}"
+    if [[ ! -f "$datafile" ]]; then
+        return
+    fi
+
+    awk -F'|' '
+        BEGIN { OFS="|" }
+        {
+            if (system("[ -d \"" $1 "\" ] && [ -d \"" $1 "/.git\" ]") == 0) {
+                $2 += 1000  # Add a higher weight for .git directories
+            }
+            print $0
+        }
+    ' "$datafile" | sort -nr -t '|' -k2
+}
