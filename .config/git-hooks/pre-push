@@ -17,6 +17,12 @@ cd ../api
 npm run lint &
 pids+=( $! )
 
+npm run build &
+pids+=( $! )
+
+npm run check-format &
+pids+=( $! )
+
 npm run depcruise &
 pids+=( $! )
 

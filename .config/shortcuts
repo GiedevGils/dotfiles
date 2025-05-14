@@ -32,6 +32,7 @@ alias update-aws-sec-groups='bash ~/tools/update-ec2-secgroups.sh'
 alias bat='batcat' 
 alias zcode='zsh ~/tools/zcode.sh'
 alias saoc='bash ~/tools/scaffold-aoc.sh'
+alias awssh='bash ~/tools/awssh.sh'
 
 # ------------- Functions for aliases
 
