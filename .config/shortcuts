@@ -23,6 +23,9 @@ alias gpnv='git push --no-verify'
 # mongo
 alias msh='mongosh analytics'
 
+# tofu
+alias tws='tofu workspace select'
+
 # tools
 alias clearopv='sh ~/tools/clear-ovp.sh'
 alias mdbexport='sh ~/tools/mdbexport.sh'
